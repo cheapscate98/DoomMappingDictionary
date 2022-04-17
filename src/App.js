@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Authenticator } from '@aws-amplify/ui-react'
+import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react'
 
 function App() {
   return (
@@ -10,7 +10,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>We now have Auth!</h1>
       </header>
+      <Authenticator />
     </div>
   );
 }
+
 export default withAuthenticator(App);
